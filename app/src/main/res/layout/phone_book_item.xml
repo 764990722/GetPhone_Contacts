@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lly_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/img_return"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:text="@string/app_name"
+            android:textColor="@color/main_def_text_color33"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/tv_qh_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp20"
+        android:textSize="16sp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="20dp"
+        android:drawablePadding="@dimen/dp10"
+        android:drawableLeft="@mipmap/icon_search_list"
+        android:textColor="@color/main_def_text_color33"
+        android:textColorHighlight="@color/main_def_text_color99"
+        android:background="@drawable/edit_search_hei"
+        android:hint="搜索联系人" />
+
+
+
+        <FrameLayout
+            android:id="@+id/fram_is"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlEnableLoadMore="false"
+                app:srlEnableAutoLoadMore="false">
+
+                <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srlFinishDuration="500"
+                    app:srlEnableLastTime="true"
+                    app:srlClassicsSpinnerStyle="FixedBehind"
+                    app:srlTextSizeTitle="16sp"
+                    app:srlTextSizeTime="10dp"
+                    app:srlTextTimeMarginTop="2dp"
+                    app:srlDrawableArrowSize="20dp"
+                    app:srlDrawableProgressSize="20dp"
+                    app:srlDrawableMarginRight="20dp"
+                    app:srlAccentColor="@color/main_def_text_color33"/>
+                    <ListView
+                        android:id="@+id/lv_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:layout_marginRight="24dp"
+                        android:listSelector="@android:color/transparent"
+                        android:divider="@null"
+                        android:scrollbars="none" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_slide_grey"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.phone.apple.getphone_contacts.a_z.SideBar
+                android:id="@+id/sidrbar"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center" />
+        </FrameLayout>
+
+
+
+</LinearLayout>

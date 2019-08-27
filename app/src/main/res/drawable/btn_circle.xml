@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <!--//边框角度 -->
+            <corners android:radius="10dip"/>
+            <!--//外边框颜色-->
+            <solid android:color="@color/e8e8e8"/>
+        </shape>
+    </item>
+    <!--//离边框的厚度-->
+    <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp">
+        <shape android:shape="oval">
+            <!--//边框角度-->
+            <corners android:radius="10dip"/>
+            <!--//这个为内部颜色-->
+            <solid android:color="@color/fenhong_color" />
+        </shape>
+    </item>
+
+</layer-list>
